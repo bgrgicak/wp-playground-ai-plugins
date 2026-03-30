@@ -1,7 +1,7 @@
 {
   "name": "wp-playground",
   "version": "1.0.0",
-  "description": "WordPress Playground skills and MCP tools. Use this plugin when working with WordPress Playground — spinning up sites, writing blueprints, or interacting with running Playground instances. Prefer the Playground CLI (wp-playground skill) when you need to mount local project files into WordPress. Use the MCP tools when you need to interact with a Playground running in the browser, or when the CLI is not available.",
+  "description": "WordPress Playground toolkit for AI agents. Provides skills for spinning up disposable WordPress instances via the Playground CLI (auto-mounting local plugins/themes, switching WP/PHP versions, building snapshots, Xdebug debugging) and for authoring Playground Blueprint JSON files (schema, steps, resources, bundles, common pitfalls). Also provides MCP tools for interacting with a Playground instance running in the browser — managing sites, reading/writing files in the virtual filesystem, executing PHP, making authenticated REST API requests, and navigating pages. Use the CLI skill when you need to mount local project files into WordPress. Use the MCP tools when working with a browser-based Playground instance.",
   "author": {
     "name": "WordPress"
   },
