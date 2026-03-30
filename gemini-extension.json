@@ -1,0 +1,11 @@
+{
+  "name": "wp-playground",
+  "version": "1.0.0",
+  "description": "WordPress Playground skills and MCP tools. Use this extension when working with WordPress Playground — spinning up sites, writing blueprints, or interacting with running Playground instances. Prefer the Playground CLI (wp-playground skill) when you need to mount local project files into WordPress. Use the MCP tools when you need to interact with a Playground running in the browser, or when the CLI is not available.",
+  "mcpServers": {
+    "wordpress-playground": {
+      "command": "npx",
+      "args": ["-y", "@wp-playground/mcp"]
+    }
+  }
+}
