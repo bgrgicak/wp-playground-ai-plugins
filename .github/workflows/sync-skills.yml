@@ -24,11 +24,16 @@ jobs:
           # Copy blueprint skill
           mkdir -p skills/blueprint
           cp "$TMPDIR/skills/blueprint/SKILL.md" skills/blueprint/SKILL.md
+          if [ -d "$TMPDIR/skills/blueprint/references" ]; then
+            mkdir -p skills/blueprint/references
+            cp "$TMPDIR/skills/blueprint/references/"* skills/blueprint/references/
+          fi
 
           # Copy wp-playground skill and references
-          mkdir -p skills/wp-playground/references
+          mkdir -p skills/wp-playground
           cp "$TMPDIR/skills/wp-playground/SKILL.md" skills/wp-playground/SKILL.md
           if [ -d "$TMPDIR/skills/wp-playground/references" ]; then
+            mkdir -p skills/wp-playground/references
             cp "$TMPDIR/skills/wp-playground/references/"* skills/wp-playground/references/
           fi
 
