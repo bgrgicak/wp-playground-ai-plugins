@@ -1,8 +1,1 @@
-{
-  "mcpServers": {
-    "wordpress-playground": {
-      "command": "npx",
-      "args": ["-y", "@wp-playground/mcp"]
-    }
-  }
-}
+wp-playground/.mcp.json

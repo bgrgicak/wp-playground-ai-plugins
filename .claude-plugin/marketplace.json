@@ -1,0 +1,16 @@
+{
+  "name": "wp-playground-local",
+  "metadata": {
+    "description": "WordPress Playground skills and MCP tools for AI coding assistants"
+  },
+  "owner": {
+    "name": "WordPress"
+  },
+  "plugins": [
+    {
+      "name": "wp-playground",
+      "description": "WordPress Playground toolkit for AI agents",
+      "source": "./"
+    }
+  ]
+}
