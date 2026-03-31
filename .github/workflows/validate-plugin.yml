@@ -31,5 +31,11 @@ jobs:
       - name: Install Claude Code
         run: npm install -g @anthropic-ai/claude-code
 
-      - name: Validate plugin
+      - name: Install Gemini CLI
+        run: npm install -g @google/gemini-cli
+
+      - name: Validate Claude Code plugin
         run: claude plugin validate .
+
+      - name: Validate Gemini extension
+        run: gemini extensions validate .

@@ -3,8 +3,15 @@
 # Enable with: git config core.hooksPath .githooks
 
 if command -v claude >/dev/null 2>&1; then
-  echo "Validating plugin..."
+  echo "Validating Claude Code plugin..."
   claude plugin validate .
 else
-  echo "Skipping plugin validation (claude CLI not installed)"
+  echo "Skipping Claude Code plugin validation (claude CLI not installed)"
+fi
+
+if command -v gemini >/dev/null 2>&1; then
+  echo "Validating Gemini extension..."
+  gemini extensions validate .
+else
+  echo "Skipping Gemini extension validation (gemini CLI not installed)"
 fi

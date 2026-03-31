@@ -81,11 +81,49 @@ gemini extensions uninstall wp-playground
 
 ## Publishing
 
-Push to GitHub. Validation runs automatically via [CI](.github/workflows/validate-plugin.yml) and a [pre-commit hook](.githooks/pre-commit). To enable the hook locally:
+### Validation
+
+Validation runs automatically via [CI](.github/workflows/validate-plugin.yml) on every push and pull request. A [pre-commit hook](.githooks/pre-commit) also runs `claude plugin validate .` and `gemini extensions validate .` locally. To enable the hook:
 
 ```
 git config core.hooksPath .githooks
 ```
+
+### Claude Code
+
+**Official marketplace:** Submit the plugin at https://claude.ai/settings/plugins/submit (or https://platform.claude.com/plugins/submit for Console).
+
+**Custom marketplace:** Push to GitHub. Users add the repo as a marketplace and install:
+
+```
+/plugin marketplace add WordPress/wp-playground
+/plugin install wp-playground@wp-playground-local
+```
+
+### Codex CLI
+
+The Codex plugin root is the `wp-playground/` subdirectory (with its own `.codex-plugin/plugin.json`, `skills/`, and `.mcp.json`).
+
+**Official marketplace (via Apps SDK):** Self-serve plugin publishing is not yet available. The current path to the official Codex Plugin Directory is through the [OpenAI Apps SDK submission process](https://developers.openai.com/apps-sdk/deploy/submission):
+
+1. Host the MCP server on a publicly accessible domain.
+2. Complete organization verification in the [OpenAI Platform Dashboard](https://platform.openai.com/).
+3. Submit for review from the dashboard with app name, description, privacy policy URL, MCP server details, screenshots, and test prompts.
+4. Once approved, the plugin appears in both the ChatGPT Apps Directory and the Codex Plugin Directory.
+
+> **Note:** Self-serve publishing is [coming soon](https://developers.openai.com/codex/plugins) according to OpenAI.
+
+**Local / team distribution:** Push to GitHub. Users clone the repo and run Codex from the repo root — the `.agents/plugins/marketplace.json` makes the plugin auto-discoverable via `/plugins` in the TUI.
+
+### Gemini CLI
+
+Gemini extensions are installed directly from a public GitHub repo. Push to GitHub and users can install via:
+
+```
+gemini extensions install https://github.com/WordPress/wp-playground
+```
+
+The `gemini-extension.json` at the repo root is discovered automatically.
 
 ## Keeping skills up to date
 
