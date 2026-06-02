@@ -1,3 +1,5 @@
+> All Playground skills will be published together with [WordPress Agent skills](https://github.com/WordPress/agent-skills/)
+
 # wp-playground
 
 WordPress Playground skills and MCP server configuration, packaged as installable extensions for AI coding assistants.
